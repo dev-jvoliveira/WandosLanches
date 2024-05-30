@@ -1,2 +1,2 @@
-# Template snack bar (lanchonete)
- Pagina inicial e cardápio
+# Template site snack bar
+ Teamplete para site snack bar(lanchonete)

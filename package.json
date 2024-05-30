@@ -1,0 +1,15 @@
+{
+  "name": "template-site-snack-bar",
+  "version": "1.0.0",
+  "description": "Teamplete para site snack bar(lanchonete)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./style/style.css -o ./style/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
