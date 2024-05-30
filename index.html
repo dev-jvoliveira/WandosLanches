@@ -5,65 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wando's Lanches</title>
     <link rel="shortcut icon" href="images/logoremovido.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/style/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="hero">
-        <div class="nav-bar">
-            <div class="nav-logo">
-              <img src="images/logoremovido.png">
+<body class="font-sans bg-cover bg-center bg-no-repeat overflow-x-hidden" style="background-image: url('images/background.jpg');">
+    <div class="relative h-screen">
+        <div class="flex items-center justify-between px-8 py-4 md:px-16 md:py-8">
+            <div class="flex-shrink-0 nav-logo">
+                <img src="images/logoremovido.png" class="w-32 md:w-48 h-auto">
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-                <div class="nav-links" id="nav-links">
-                    <i class="fa fa-close" onclick="closeMenu()"></i>
-                    <ul>
-                        <a href="#"><li>PÁGINA INICIAL</li></a>
-                        <a href="#"><li>SOBRE NÓS</li></a>
-                        <a href="cardapio.html"><li>CARDÁPIO</li></a>
-                    </ul>
-                    <button type="button" class="btn">SING UP</button>
-                </div>
+            <i class="fa fa-bars text-white text-2xl cursor-pointer md:hidden" onclick="showMenu()"></i>
+            <div id="nav-links" class="hidden md:flex flex-grow items-center justify-between">
+                <ul class="flex space-x-6 ml-12">
+                    <li><a href="#" class="text-white text-sm hover:underline">PÁGINA INICIAL</a></li>
+                    <li><a href="#" class="text-white text-sm hover:underline">SOBRE NÓS</a></li>
+                    <li><a href="cardapio.html" class="text-white text-sm hover:underline">CARDÁPIO</a></li>
+                </ul>
+                <button type="button" class="px-4 py-2 bg-yellow-500 text-black font-bold ml-4">SING UP</button>
+            </div>
         </div>
-        
-       <div class="banner-title">
-            <h1>Delícias artesanais, <span>sabores irresistíveis.</span><br> Venha provar!</h1>
-            <button type="button" class="btn">EXPLORE</button>
-       </div>
-       <div class="vertical-bar">
-            <div class="search-icon">
-                <i class="fa fa-list"></i>
-                <i class="fa fa-search" aria-hidden="true"></i>
+
+        <div class="text-white mx-10 my-20 md:mx-32 md:my-40">
+            <h1 class="text-4xl md:text-6xl mb-8">Delícias artesanais, <span class="text-yellow-500">sabores irresistíveis.</span><br> Venha provar!</h1>
+            <div class="flex items-center space-x-4">
+                <a href="https://api.whatsapp.com/send?phone=5519997288018&text=Ol%C3%A1%F0%9F%96%90%EF%B8%8F%0APoderia%20me%20enviar%20o%20card%C3%A1pio%20por%20gentileza%3F%20" class="fab fa-whatsapp text-4xl text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
+                <a href="https://www.facebook.com/wandoslanches?locale=pt_BR" class="fab fa-facebook text-4xl text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
+                <a href="https://www.instagram.com/wandoslanches/" class="fab fa-instagram text-4xl text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
             </div>
-            <div class="social-icon">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <div class="absolute top-0 left-0 h-full flex flex-col justify-between p-5 md:hidden">
+            <div class="space-y-8">
+                
             </div>
-       </div>
-      <div class="notifications">
-            <div class="contents">
-                <small>ESPECIAL DE HAMBÚRGUER</small><br>
-                <div class="navigation-links"><p><a href="#">Anterior</a><a href="#">Próximo</a></p></div>
+            <div class="space-y-8 mt-auto">
+                <a href="https://www.facebook.com/wandoslanches?locale=pt_BR" class="fab fa-facebook text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
+                <a href="https://www.instagram.com/wandoslanches/" class="fab fa-instagram text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
+                <a href="https://api.whatsapp.com/send?phone=5519997288018&text=Ol%C3%A1%F0%9F%96%90%EF%B8%8F%0APoderia%20me%20enviar%20o%20card%C3%A1pio%20por%20gentileza%3F%20" class="fab fa-whatsapp text-black bg-yellow-500 rounded-full p-2 cursor-pointer" target="_blank"></a>
             </div>
-            <div class="notifications-img">
-                <img src="images/imgsmall.jpg">
+        </div>
+
+        <div class="absolute bottom-0 right-0 flex items-center bg-yellow-500 shadow-lg w-full md:w-1/3 p-4">
+            <div class="flex-1">
+                <small class="text-black pl-3">ESPECIAL DE HAMBÚRGUER</small><br>
+                <div class="text-right mt-2">
+                    <a href="#" class="text-black text-sm mr-4">Anterior</a>
+                    <a href="#" class="text-black text-sm p-8">Próximo</a>
+                </div>
             </div>
-      </div> 
+            <div class="flex-1">
+                <img src="images/imgsmall.jpg" class="rounded-lg">
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white flex flex-col items-center justify-center space-y-8 hidden md:hidden">
+        <i class="fa fa-close text-2xl cursor-pointer" onclick="closeMenu()"></i>
+        <ul class="space-y-6 text-center">
+            <li><a href="#" class="text-xl">PÁGINA INICIAL</a></li>
+            <li><a href="#" class="text-xl">SOBRE NÓS</a></li>
+            <li><a href="cardapio.html" class="text-xl">CARDÁPIO</a></li>
+        </ul>
+        <a id="whatsapp-icon" target="_blank"></a><button type="button" class="px-6 py-3 bg-yellow-500 text-black font-bold rounded-full">Precisa de ajuda?</button>
     </div>
 
     <script>
-        var show = document.getElementById("nav-links");
-        function showMenu(){
-            show.style.right = "0";
-        }
-        function closeMenu(){
-            show.style.right = "-200px";
-        }
-    </script>
+        var mobileMenu = document.getElementById("mobile-menu");
 
-a
+        function showMenu() {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+        }
+        function closeMenu() {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+        }
+        document.getElementById("whatsapp-icon").addEventListener("click", function() {
+        window.open("https://api.whatsapp.com/send?phone=5519997288018&text=Ol%C3%A1%F0%9F%96%90%EF%B8%8F%0APoderia%20me%20enviar%20o%20card%C3%A1pio%20por%20gentileza%3F%20", "_blank");
+    });
+
+    </script>
 </body>
 </html>
