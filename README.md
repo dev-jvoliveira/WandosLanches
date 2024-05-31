@@ -1,2 +1,3 @@
-# Trabalhando em construir um site para uma lanchonete de minha cidade.
- Construindo um sonho... https://dev-jvoliveira.github.io/Template-snack-bar--lanchonete
+# Trabalhando em construir um site para uma lanchonete de minha cidade. Click no link para acessar o projeto.
+ https://dev-jvoliveira.github.io/WandosLanches/
+Construindo um sonho... 
