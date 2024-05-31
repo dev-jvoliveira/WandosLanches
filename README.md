@@ -1,2 +1,2 @@
-# Template site snack bar
- Teamplete para site snack bar(lanchonete)] https://dev-jvoliveira.github.io/Template-snack-bar--lanchonete
+# Trabalhando em construir um site para uma lanchonete de minha cidade.
+ Construindo um sonho... https://dev-jvoliveira.github.io/Template-snack-bar--lanchonete
