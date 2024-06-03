@@ -18,13 +18,12 @@
 
             <span class="text-white font-medium md:pl-5 px-5">Avenida Independência, número 380, Centro (Próximo ao teatro municipal)</span>
 
-            <div class="bg-green-600 px-4 py-1 rounded-1g mt-5" id="date-span">
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
                 <span class="text-white font-medium">De Quinta-feira a Terça-Feira das 17:30h à 01:00h</span>
             </div>
         </div>
     </header>
     <!--Fim Header-->
-
 
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso cardápio</h2>
 
@@ -44,7 +43,7 @@
                     <p class="text-sm">Pão levinho de fermentação natural da Trigou, hambúrguer 160g, queijo prato e maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 23,00</p>
+                        <p class="font-bold">R$: 23,00</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
                         data-name="Hambúrguer Smash"
                         data-price="23.00">
@@ -52,8 +51,6 @@
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto Item1-->
 
@@ -68,16 +65,14 @@
                     <p class="text-sm">Pão levinho de fermentação natural da Trigou, hambúrguer 160g, queijo prato e maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 26,00</p>
+                        <p class="font-bold">R$: 26,00</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
-                        data-name="hambúrguer Duplo"
+                        data-name="Hambúrguer Duplo"
                         data-price="26.00">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto Item2-->
 
@@ -92,16 +87,14 @@
                     <p class="text-sm">Pão levinho de fermentação natural da Trigou, hambúrguer 160g, queijo prato e maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 31,00</p>
+                        <p class="font-bold">R$: 31,00</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
-                        data-name="duplocheddar"
+                        data-name="Duplo Cheddar"
                         data-price="31.00">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto Item3-->
 
@@ -116,119 +109,96 @@
                     <p class="text-sm">Pão levinho de fermentação natural da Trigou, hambúrguer 160g, queijo prato e maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 29,00</p>
+                        <p class="font-bold">R$: 29,00</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
-                        data-name="xsalada"
+                        data-name="X-Salada"
                         data-price="29.00">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto Item4-->
-
-
         </main>
 
         <!--Inicio bebidas-->
 
         <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 class="font-bold text-3xl">
-                Bebidas
-            </h2>
+            <h2 class="font-bold text-3xl">Bebidas</h2>
         </div>
 
         <!--Grid bebidas-->
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menuu">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
             <!--Produto bebida1-->
             <div class="flex gap-3 md:pl-5 px-5">
                 <img src="images/refri-2.png" 
-                alt="guarana" 
+                alt="Guaraná Antarctica" 
                 class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
 
                 <div>
                     <p class="font-bold">Guaraná Antarctica</p>
-                    <p class="text-sm">Guaraná Antarctica lata 350ml </p>
+                    <p class="text-sm">Guaraná Antarctica lata 350ml</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 4,90</p>
+                        <p class="font-bold">R$: 4.90</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
-                        data-name="cocacola350"
-                        data-price="4,90">
+                        data-name="Guaraná Antarctica"
+                        data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto bebida1-->
-
 
             <!--Produto bebida2-->
             <div class="flex gap-3 md:pl-5 px-5">
                 <img src="images/refri-1.png" 
-                alt="guarana" 
+                alt="Coca-Cola" 
                 class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
 
                 <div>
-                    <p class="font-bold">Coca-Cola</p>
+                    <p class="font-bold" id="item-name">Coca-Cola</p>
                     <p class="text-sm">Refrigerante Coca-Cola lata 350ml</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
-                        <p>R$: 4,90</p>
+                        <p class="font-bold">R$: 4.90</p>
                         <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
-                        data-name="cocacola350"
-                        data-price="4,90">
+                        data-name="Coca-Cola"
+                        data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
                 </div>
-
-
             </div>
             <!--Fim Produto bebida2-->
-
-
         </div>
-
         <!--Fim grid bebidas-->
-
-
     </div>
     <!--Fim Menu-->
 
-    <!--Modal cart-->
-
-    <div class="bg-black/65 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden">
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
-            <div id="cart-items" class="flex justify-between mb-2 flex-col">
-
-                <p class=" font-bold">Total: <span id="cart-total">0.0</span></p>
-
+    <!-- Modal cart -->
+<div class="bg-black/65 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-[99] flex items-center justify-center hidden" id="cart-modal">
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col">
+            <!-- Contêiner para os itens do carrinho -->
+            <div id="cart-items-content"></div>
+            <p class="font-bold" hidden>Total: <span id="cart-total">0.0</span></p>
+            <!-- Endereço de entrega e botão Finalizar Pedido -->
+            <div class="flex flex-col">
                 <p class="font-bold mt-4">Endereço de entrega</p>
-
-                <input type="text"
-                placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1">
-
+                <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1">
                 <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
-
-                <div class="flex items-center justify-between mt-5 w-full">
+                <div class="flex items-center gap-2 justify-between mt-5 w-full">
                     <button id="close-modal-btn">Fechar</button>
                     <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
                 </div>
-
-
             </div>
         </div>
-
     </div>
-
-    <!--Fim Modal cart-->
+</div>
 
 
 
@@ -242,6 +212,8 @@
     </footer>
     <!--Fim carrinho de compras-->
 
-    
+
+    <script src="script.js"></script>
+
 </body>
 </html>
