@@ -9,6 +9,7 @@ const cartCounter = document.getElementById("cart-count");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
 
+
 let cart = [];
 
 // Abrir o modal do carrinho
@@ -83,8 +84,9 @@ function updateCartModal() {
                 <p class="font-bold">${item.name}</p>
                 <p class="mt-1">Preço: R$ ${item.price.toFixed(2)}</p>
                 <p class="mt-1">Qtd: ${item.quantity}</p>
-                <button class="text-red-500 mt-2">Remover</button>
-                
+            </div>
+            <div class="flex justify-between items-center">
+                <button class="remove-from-cart-btn bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition ms-10" data-name="${item.name}">Remover</button>
             </div>
         `;
 
@@ -107,3 +109,177 @@ function updateCartCounter() {
     cartCounter.innerHTML = cart.length;
 };
 
+// Função para remover o item do carrinho
+cartItemsContainer.addEventListener("click", function(event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name");
+        decrementItemQuantity(name);
+    }
+});
+
+function decrementItemQuantity(name) {
+    const itemIndex = cart.findIndex(item => item.name === name);
+
+    if (itemIndex !== -1) {
+        if (cart[itemIndex].quantity > 1) {
+            cart[itemIndex].quantity -= 1;
+        } else {
+            cart.splice(itemIndex, 1);
+        }
+    }
+
+    updateCartModal();
+    updateCartCounter();
+}
+
+
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
+
+    if (inputValue !== ""){
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
+    }
+
+})
+
+
+//Finalizar pedido
+checkoutBtn.addEventListener("click", function(){
+    const isOpen = checkRestaurantOpen();
+    
+    if(!isOpen){
+        
+        
+        Toastify({
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#ef4444",
+            },
+            text: "Estamos fechamos no momento",
+            }).showToast();
+        
+        return;
+
+    }
+    
+    if (cart.length === 0) return;
+
+    if (addressInput.value === ""){
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+    }
+});
+
+
+
+//Enviando o pedido para a API do whatsApp
+// Função para construir a mensagem do pedido incluindo o endereço e a taxa de entrega
+function buildOrderMessage() {
+    let message = "Olá, gostaria de fazer o seguinte pedido:\n";
+
+    // Iterar sobre cada item no carrinho
+    cart.forEach(item => {
+        message += `${item.name}: ${item.quantity}\n`;
+    });
+
+    // Adicionar o endereço ao final da mensagem
+    const address = addressInput.value.trim();
+    if (address !== "") {
+        message += `\nEndereço de entrega: ${address}`;
+    }
+
+    // Adicionar a taxa de entrega ao total
+    const deliveryFee = 10; // Taxa de entrega de R$10
+    const total = parseFloat(cartTotal.textContent) + deliveryFee;
+
+    // Adicionar o total ao final da mensagem
+    message += `\nTaxa de entrega: R$ ${deliveryFee.toFixed(2)}`;
+    message += `\nTotal (incluindo taxa de entrega): R$ ${total.toFixed(2)}`;
+
+    return encodeURIComponent(message); // Codificar a mensagem para URL
+}
+
+
+
+// Função para enviar o pedido via WhatsApp
+function sendOrderViaWhatsApp() {
+    const phoneNumber = "+5519981787354"; // Substitua pelo seu número de telefone com DDD
+    const message = buildOrderMessage();
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Abrir a URL do WhatsApp em uma nova aba
+    window.open(whatsappURL, "_blank");
+
+    cart = [];
+    updateCartModal();
+}
+
+// Adicionar um ouvinte de evento ao botão de finalizar pedido
+checkoutBtn.addEventListener("click", function(){
+    const isOpen = checkRestaurantOpen();
+    
+    if(!isOpen){
+        Toastify({
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#ef4444",
+            },
+            text: "Estamos fechamos no momento",
+            }).showToast();
+        
+        return;
+    }
+    
+    if (cart.length === 0) return;
+
+    if (addressInput.value === ""){
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+    }
+
+    // Enviar o pedido via WhatsApp
+    sendOrderViaWhatsApp();
+});
+    
+
+    
+
+
+//Verificando a hora e manipular o card horario
+function checkRestaurantOpen() {
+    const data = new Date();
+    const hora = data.getHours();
+    const minutos = data.getMinutes();
+    return (hora > 17 || (hora === 17 && minutos >= 30)) || (hora < 1);
+}
+
+
+function updateRestaurantStatus() {
+    const spanItem = document.getElementById("date-span");
+    const isOpen = checkRestaurantOpen();
+
+    if (isOpen) {
+        spanItem.classList.remove("bg-red-500");
+        spanItem.classList.add("bg-green-600");
+    } else {
+        spanItem.classList.remove("bg-green-600");
+        spanItem.classList.add("bg-red-500");
+    }
+}
+
+// Chamada inicial para definir o status do restaurante na inicialização da página
+updateRestaurantStatus();
+
+// Chamada da função a cada intervalo de tempo (por exemplo, a cada minuto)
+setInterval(updateRestaurantStatus, 60000); // Atualiza a cada minuto
