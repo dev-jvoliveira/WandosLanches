@@ -1,3 +1,3 @@
 # Trabalhando em construir um site para uma lanchonete de minha cidade. Click no link para acessar o projeto.
- https://dev-jvoliveira.github.io/WandosLanches/
+ https://wandos-lanches.vercel.app/
 Construindo um sonho... 
