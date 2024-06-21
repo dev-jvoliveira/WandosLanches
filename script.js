@@ -209,7 +209,7 @@ function buildOrderMessage() {
 
 // Função para enviar o pedido via WhatsApp
 function sendOrderViaWhatsApp() {
-    const phoneNumber = "+5519974273576"; // Substitua pelo seu número de telefone com DDD
+    const phoneNumber = "+551999728-8018"; // Substitua pelo seu número de telefone com DDD
     const message = buildOrderMessage();
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
