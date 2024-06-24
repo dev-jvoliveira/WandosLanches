@@ -207,9 +207,38 @@ function buildOrderMessage() {
 
 
 
+// Função para construir a mensagem do pedido
+function buildOrderMessage() {
+    const address = document.getElementById("address").value;
+    const observations = document.getElementById("observations").value;
+    const paymentMethods = document.getElementsByName("payment");
+    let paymentMethod = "";
+
+    // Verificar qual opção de pagamento está selecionada
+    for (let i = 0; i < paymentMethods.length; i++) {
+        if (paymentMethods[i].checked) {
+            paymentMethod = paymentMethods[i].value;
+            break;
+        }
+    }
+
+    // Construir a mensagem do pedido
+    let message = `Olá, boa noite gostaria de estar fazendo um pedido:\n\n`;
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - ${item.quantity} x ${item.price}\n`;
+    });
+
+    message += `\nTotal: R$: ${document.getElementById("cart-total").innerText}`;
+    message += `\n\nEndereço de entrega: ${address}`;
+    message += `\nObservações: ${observations}`;
+    message += `\nMétodo de pagamento: ${paymentMethod}`;
+
+    return encodeURIComponent(message); // Codificar a mensagem para URL
+}
+
 // Função para enviar o pedido via WhatsApp
 function sendOrderViaWhatsApp() {
-    const phoneNumber = "+5519997288018"; // Substitua pelo seu número de telefone com DDD
+    const phoneNumber = "+5519997288018"; // Para trocar o numero
     const message = buildOrderMessage();
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -235,7 +264,7 @@ checkoutBtn.addEventListener("click", function(){
                 background: "#ef4444",
             },
             text: "Estamos fechamos no momento",
-            }).showToast();
+        }).showToast();
         
         return;
     }
@@ -243,8 +272,8 @@ checkoutBtn.addEventListener("click", function(){
     if (cart.length === 0) return;
 
     if (addressInput.value === ""){
-        addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")
+        addressWarn.classList.remove("hidden");
+        addressInput.classList.add("border-red-500");
         return;
     }
 
@@ -261,7 +290,7 @@ function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
     const minutos = data.getMinutes();
-    return (hora > 17 || (hora === 17 && minutos >= 30)) || (hora < 1);
+    return (hora > 13 || (hora === 13 && minutos >= 30)) || (hora < 1);
 }
 
 
