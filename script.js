@@ -311,4 +311,8 @@ function updateRestaurantStatus() {
 updateRestaurantStatus();
 
 // Chamada da função a cada intervalo de tempo (por exemplo, a cada minuto)
-setInterval(updateRestaurantStatus, 60000); // Atualiza a cada minuto
+setInterval(updateRestaurantStatus, 60000); // Atualiza a cada minuto 
+
+
+
+

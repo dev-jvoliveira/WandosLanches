@@ -29,8 +29,14 @@
                 <a href="https://web.facebook.com/wandoslanches?locale=pt_BR" target="_blank"><i class="fab fa-facebook-square text-white text-2xl"></i></a>
             </div>
         </div>
+        
+        <!-- Nova seção para taxa de entrega -->
+        <div class="bg-red-600 px-4 py-1 rounded-lg mt-5" id="delivery-fee-info">
+            <span class="text-white font-semibold text-justify block">A taxa de entrega varia de acordo com o bairro. Por favor, consulte o nosso atendimento para mais informações.</span>
+        </div>
     </div>
 </header>
+
 
 <!--Fim Header-->
 
@@ -2792,16 +2798,16 @@
         </div>
         <!--Fim Produto Item97-->
 
-        <!--Produto Item101-->
+        <!-- Produto Item101 -->
         <div class="flex gap-3 md:pl-5 px-5">
             <img src="images/101-HEINEKEN00.png" 
             alt="CHURRASCO" 
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
-    
+        
             <div>
                 <p class="font-bold">CERVEJA SEM ÁLCOOL (LONG NECK 350ml)</p>
                 <p class="text-sm">Long neck de cerveja sem álcool (350ml)</p>
-    
+            
                 <div class="flex items-center gap-2 justify-between mt-3">
                     <p class="font-bold">R$: 10,00</p>
                     <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
@@ -2812,7 +2818,7 @@
                 </div>
             </div>
         </div>
-        <!--Fim Produto Item101-->
+<!-- Fim Produto Item101 -->
 
     </div>
     
@@ -2823,11 +2829,13 @@
 
 <!-- Modal cart -->
 <div class="bg-black/65 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-[99] flex items-center justify-center hidden" id="cart-modal">
-    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] max-h-[80%] overflow-y-auto">
         <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
         <div id="cart-items" class="flex justify-between mb-2 flex-col">
             <!-- Contêiner para os itens do carrinho -->
-            <div id="cart-items-content"></div>
+            <div id="cart-items-content" class="max-h-[40vh] overflow-y-auto mb-4">
+                <!-- Adicione seus itens do carrinho aqui -->
+            </div>
             <p class="font-bold" hidden>Total: <span id="cart-total">0.0</span></p>
             <!-- Endereço de entrega e botão Finalizar Pedido -->
             <div class="flex flex-col">
@@ -2864,6 +2872,7 @@
         </div>
     </div>
 </div>
+
 
 
 
