@@ -290,7 +290,7 @@ function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
     const minutos = data.getMinutes();
-    return (hora > 13 || (hora === 13 && minutos >= 30)) || (hora < 1);
+    return (hora > 17 || (hora === 17 && minutos >= 30)) || (hora < 23);
 }
 
 
