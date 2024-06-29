@@ -290,9 +290,11 @@ function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
     const minutos = data.getMinutes();
-    return (hora > 17 || (hora === 17 && minutos >= 30)) || (hora < 23);
+    return (
+        (hora > 17 || (hora === 17 && minutos >= 30)) && 
+        (hora < 23 || (hora === 23 && minutos < 30))
+    );
 }
-
 
 function updateRestaurantStatus() {
     const spanItem = document.getElementById("date-span");
@@ -311,7 +313,8 @@ function updateRestaurantStatus() {
 updateRestaurantStatus();
 
 // Chamada da função a cada intervalo de tempo (por exemplo, a cada minuto)
-setInterval(updateRestaurantStatus, 60000); // Atualiza a cada minuto 
+setInterval(updateRestaurantStatus, 60000); // Atualiza a cada minuto
+
 
 
 
