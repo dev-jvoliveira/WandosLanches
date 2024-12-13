@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="images/logoremovido.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+<link rel="stylesheet" href="style/output.css">
+<title>Wando's Lanches Cardápio</title>
+</head>
+<body class="cardapio">
+
+<!--Header-->
+<header class="w-full h-[680px] bg-zinc-900 bg-home" style="background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <div class="w-full h-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
+        <img src="images/logoremovido.png" alt="Wando's Lanches" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white text-center">Wando's Lanches</h1>
+
+        <span class="text-white font-medium text-center px-5">Avenida Independência, número 380, Centro (Próximo ao teatro municipal)</span>
+
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+            <span class="text-white font-medium text-center block">De Quinta-feira a Terça-Feira das 17:30h às 23:30h</span>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2 mt-5">
+            <a href="index.html" target="_self" class="bg-white text-gray-900 font-medium px-3 py-1 rounded-md">Página Inicial</a>
+            <div class="flex justify-center sm:justify-start gap-4 mt-4 sm:mt-0">
+                <a href="https://www.instagram.com/wandoslanches/" target="_blank"><i class="fab fa-instagram text-white text-2xl"></i></a>
+                <a href="https://web.facebook.com/wandoslanches?locale=pt_BR" target="_blank"><i class="fab fa-facebook-square text-white text-2xl"></i></a>
+            </div>
+        </div>
+        
+        <!-- Nova seção para taxa de entrega -->
+        <div class="bg-red-600 px-4 py-1 rounded-lg mt-5" id="delivery-fee-info">
+            <span class="text-white font-semibold text-justify block">A taxa de entrega varia de acordo com o bairro. Por favor, consulte o nosso atendimento para mais informações.</span>
+        </div>
+    </div>
+</header>
+
+
+<!--Fim Header-->
+
+<h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso cardápio</h2>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">HAMBURGUER ARTESANAL</h2>
+</div>
+
+<!--Inicio Menu-->
+
+<div id="menuu">
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        
+        <!--Produto Item1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="Hambúrguer Smash" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+            <div>
+                <p class="font-bold">X-BURGER</p>
+                <p class="text-sm">Hambúrguer (200g), queijo e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 30,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-BURGER"
+                    data-price="30.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item1-->
+
+            <!--Produto Item2-->
+            <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="Hambúrguer Duplo" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+            <div>
+                <p class="font-bold">X-SALADA</p>
+                <p class="text-sm">Hambúrguer (200g), queijo, tomate, alface, maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 34,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-SALADA"
+                    data-price="34.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item2-->
+
+        <!--Produto Item3-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="Duplo cheddar" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+            <div>
+                <p class="font-bold">X-SALADA PLUS</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, presunto, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 36,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-SALADA PLUS"
+                    data-price="36.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item3-->
+
+        <!--Produto Item4-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">X-EGG</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, ovo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 36,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-EGG"
+                    data-price="36.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item4-->
+
+        <!--Produto Item5-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">X-BACON</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 39,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-BACON"
+                    data-price="39.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item5-->
+
+        <!--Produto Item6-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">X-BACON EGG</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 41,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-BACON EGG"
+                    data-price="41.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item6-->
+
+        <!--Produto Item7-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">ESPECIAL DE HAMBURGUER</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, presunto, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 44,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ESPECIAL DE HAMBURGUER"
+                    data-price="44.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item7-->
+
+        <!--Produto Item8-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">X-TUDO</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, presunto, ovo, bacon, calabresa, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 49,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-TUDO"
+                    data-price="49.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item8-->
+
+        <!--Produto Item9-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="X-Salada" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" >
+
+            <div>
+                <p class="font-bold">HAMBURGUER À MODA</p>
+                <p class="text-sm">Hambúrguer(200g), queijo, presunto, ovo, bacon, calabresa, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 59,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="HAMBURGUER À MODA"
+                    data-price="59.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item9-->
+
+    
+
+    </main>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl ">BIFE DE CARNE (Ancho / Chorizo / Baby Beef)</h2>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item10-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">CHURRASCO</p>
+                <p class="text-sm">Carne (250g), queijo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 40,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="CHURRASCO"
+                    data-price="40.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item10-->
+
+        <!--Produto Item11-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-CARNE PLUS</p>
+                <p class="text-sm">Carne (250g), queijo, presunto, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 42,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-CARNE PLUS"
+                    data-price="42.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item11-->
+
+        <!--Produto Item12-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-CARNE EGG</p>
+                <p class="text-sm">Carne (250g), queijo, ovo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 42,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-CARNE EGG"
+                    data-price="42.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item12-->
+
+        <!--Produto Item13-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-CARNE BACON</p>
+                <p class="text-sm">Carne (250g), queijo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 46,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-CARNE BACON"
+                    data-price="46.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item13-->
+
+        <!--Produto Item14-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-CARNE BACON EGG</p>
+                <p class="text-sm">Carne (250g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 48,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-CARNE BACON EGG"
+                    data-price="48.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item14-->
+
+        <!--Produto Item15-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">ESPECIAL DE CARNE</p>
+                <p class="text-sm">Carne (250g), queijo, presunto, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 52,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ESPECIAL DE CARNE"
+                    data-price="52.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item15-->
+
+        <!--Produto Item16-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">CARNE À MODA</p>
+                <p class="text-sm">Carne (250g), queijo, presunto, ovo, bacon, calabresa, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 63,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="CARNE À MODA"
+                    data-price="63.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item16-->     
+    </div>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">FRANGO (Filé de frango)</h2>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item17-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-FRANGO</p>
+                <p class="text-sm">Filé de frango (250g), queijo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 32,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-FRANGO"
+                    data-price="32.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item17-->
+
+        <!--Produto Item18-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-FRANGO PLUS</p>
+                <p class="text-sm">Filé de frango (250g), queijo, presunto, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 35,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-FRANGO PLUS"
+                    data-price="35.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item18-->
+
+        <!--Produto Item19-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-FRANGO EGG</p>
+                <p class="text-sm">Filé de frango (250g), queijo, ovo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 35,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-FRANGO EGG"
+                    data-price="35.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item19-->
+
+        <!--Produto Item20-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">FRANMILHO</p>
+                <p class="text-sm">Filé de frango (250g), queijo, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 40,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FRANMILHO"
+                    data-price="40.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item20-->
+
+        <!--Produto Item21-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-FRANGO BACON</p>
+                <p class="text-sm">Filé de frango (250g), queijo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 37,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-FRANGO BACON"
+                    data-price="37.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item21-->
+
+        <!--Produto Item22-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-FRANGO BACON EGG</p>
+                <p class="text-sm">Filé de frango (250g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 39,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-FRANGO BACON EGG"
+                    data-price="39.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item22-->
+
+        <!--Produto Item23-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">ESPECIAL DE FRANGO</p>
+                <p class="text-sm">Filé de frango (250g), queijo, presunto, ovo, bacon, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 49,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ESPECIAL DE FRANGO"
+                    data-price="49.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item23-->
+
+        <!--Produto Item24-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">FRANGO À MODA</p>
+                <p class="text-sm">Filé de frango (250g), queijo, presunto, ovo, bacon, calabresa, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 58,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FRANGO À MODA"
+                    data-price="58.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item24-->
+    </div>  
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl ">LOMBO</h2>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item25-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-LOMBO</p>
+                <p class="text-sm">Lombo (250g), queijo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 30,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-LOMBO"
+                    data-price="30.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item25-->
+
+        <!--Produto Item26-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-LOMBO PLUS</p>
+                <p class="text-sm">Lombo (250g), queijo, presunto, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 32,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-LOMBO PLUS"
+                    data-price="32.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item26-->
+
+        <!--Produto Item27-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-LOMBO EGG</p>
+                <p class="text-sm">Lombo (250g), queijo, ovo, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 32,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-LOMBO EGG"
+                    data-price="32.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item27-->
+
+        <!--Produto Item28-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-LOMBO BACON</p>
+                <p class="text-sm">Lombo (250g), queijo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 36,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-LOMBO BACON"
+                    data-price="36.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item28-->
+
+        <!--Produto Item29-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">X-LOMBO BACON EGG</p>
+                <p class="text-sm">Lombo (250g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 38,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="X-LOMBO BACON EGG"
+                    data-price="38.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item29-->
+
+        <!--Produto Item30-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">ESPECIAL DE LOMBO</p>
+                <p class="text-sm">Lombo (250g), queijo, presunto, ovo, bacon, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 41,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ESPECIAL DE LOMBO"
+                    data-price="41.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item30-->
+
+
+        <!--Produto Item31-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/embreve.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+            <div>
+                <p class="font-bold">LOMBO À MODA</p>
+                <p class="text-sm">Lombo (250g), queijo, presunto, ovo, bacon, calabresa, milho, catupiry, tomate, alface e maionese.</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 56,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="LOMBO À MODA"
+                    data-price="56.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item31-->
+
+        
+    
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">LINGUIÇA GOURMET</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item32-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-LINGUIÇA</p>
+            <p class="text-sm">Linguiça (200g), queijo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 32,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA"
+                data-price="32.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item32-->
+
+    <!--Produto Item33-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-LINGUIÇA PLUS</p>
+            <p class="text-sm">Linguiça (200g), queijo, presunto, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 33,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA PLUS"
+                data-price="33.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item33-->
+
+    <!--Produto Item34-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-LINGUIÇA EGG</p>
+            <p class="text-sm">Linguiça (200g), queijo, ovo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 33,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA EGG"
+                data-price="33.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item34-->
+
+    <!--Produto Item35-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-LINGUIÇA BACON</p>
+            <p class="text-sm">Linguiça (200g), queijo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 37,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA BACON"
+                data-price="37.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item35-->
+
+    <!--Produto Item36-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-LINGUIÇA BACON EGG</p>
+            <p class="text-sm">Linguiça (200g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 39,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA BACON EGG"
+                data-price="39.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item36-->
+
+    <!--Produto Item37-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">ESPECIAL DE LINGUIÇA</p>
+            <p class="text-sm">Linguiça (200g), queijo, presunto, ovo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 43,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-LINGUIÇA BACON EGG"
+                data-price="43.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item37-->
+
+    <!--Produto Item38-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">LINGUIÇA À MODA</p>
+            <p class="text-sm">Linguiça (200g), queijo, presunto, ovo, bacon, calabresa, milho, catupiry, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 58,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="LINGUIÇA À MODA"
+                data-price="58.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item38-->
+    
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl ">CALABRESA</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item39-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-CALABRESA</p>
+            <p class="text-sm">Calabresa (250g), queijo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 30,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-CALABRESA"
+                data-price="30.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item39-->
+  
+    <!--Produto Item40-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-CALABRESA PLUS</p>
+            <p class="text-sm">Calabresa (250g), queijo, presunto, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 33,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-CALABRESA PLUS"
+                data-price="33.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item40--> 
+
+    <!--Produto Item41-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-CALABRESA EGG</p>
+            <p class="text-sm">Calabresa (250g), queijo, ovo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 33,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-CALABRESA EGG"
+                data-price="33.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item41-->
+
+    <!--Produto Item42-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-CALABRESA BACON</p>
+            <p class="text-sm">Calabresa (250g), queijo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 36,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-CALABRESA BACON"
+                data-price="36.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item42-->
+
+    <!--Produto Item43-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-CALABRESA BACON EGG</p>
+            <p class="text-sm">Calabresa (250g), queijo, ovo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 38,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-CALABRESA BACON EGG"
+                data-price="38.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item43--> 
+
+    <!--Produto Item44-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">ESPECIAL DE CALABRESA</p>
+            <p class="text-sm">Calabresa (250g), queijo, presunto, ovo, bacon, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 42,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ESPECIAL DE CALABRESA"
+                data-price="42.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item44-->
+
+    <!--Produto Item45-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">CALABRESA À MODA</p>
+            <p class="text-sm">Calabresa (250g), queijo, presunto, ovo, bacon, milho, catupiry, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 58,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="CALABRESA À MODA"
+                data-price="58.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item45-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">PRESUNTO</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item46-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BAURU</p>
+            <p class="text-sm">Presunto (150g), queijo, tomate e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 26,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BAURU"
+                data-price="26.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item46-->
+
+    <!--Produto Item47-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">AMERICANO</p>
+            <p class="text-sm">Presunto (150g), queijo, ovo, tomate e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 29,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="AMERICANO"
+                data-price="29.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item47-->
+
+    <!--Produto Item48-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">AMERICANO BACON</p>
+            <p class="text-sm">Presunto (150g), queijo, ovo, bacon, tomate e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="AMERICANO BACON"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item48-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl ">COSTELA</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item49-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-COSTELA</p>
+            <p class="text-sm">Costela (250g), queijo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-COSTELA"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item49-->
+
+    <!--Produto Item50-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">ESPECIAL DE COSTELA</p>
+            <p class="text-sm">Costela (250g), queijo, presunto, ovo, bacon, catupiry, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 60,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ESPECIAL DE COSTELA"
+                data-price="60.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item50-->
+    
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">CARNE SECA</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item51-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">CARNE SECA</p>
+            <p class="text-sm">Carne seca (250g), queijo, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="CARNE SECA"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item51-->
+
+    <!--Produto Item52-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">ESPECIAL DE CARNE SECA</p>
+            <p class="text-sm">Carne seca (250g), queijo, presunto, ovo, bacon, catupiry, tomate, alface e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 60,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="CARNE SECA"
+                data-price="60.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item52-->
+ 
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl ">VEGETARIANO</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item53-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">VEGETARIANO</p>
+            <p class="text-sm">2 ovos, queijo, batata palha, milho, alface, tomate, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="VEGETARIANO"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item53-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">LANCHES KIDS</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item54-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-KIDS</p>
+            <p class="text-sm">2 ovos, queijo, batata palha, milho, alface, tomate, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 18,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-KIDS"
+                data-price="18.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item54-->
+
+    <!--Produto Item55-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">X-KIDS COMBO</p>
+            <p class="text-sm">2 Hambúrgueres (100g), queijo, tomate, alface, maionese, batatas fritas.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 29,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="X-KIDS COMBO"
+                data-price="29.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item55-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">HOT DOG (Cachorro Quente)</h2>
+</div>
+<div class="mx-auto max-w-7x1 px-4 my-2 text-center">
+    <h3 class="font-bold text-2x1 text-red-500 underline underline-offset-1">Obs.: Os Hot Dogs não vêm com borda, a borda entra como adicional R$: 10,00</h3>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item56-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">HOT DOG SIMPLES</p>
+            <p class="text-sm">2 salsichas, tomate, batata palha, catchup, mostarda e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 20,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="HOT DOG SIMPLES"
+                data-price="20.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item56-->
+
+    <!--Produto Item57-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">HOT DOG ESPECIAL</p>
+            <p class="text-sm">2 salsichas, tomate, milho, batata palha, catchup, mostarda, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 30,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="HOT DOG ESPECIAL"
+                data-price="30.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item57-->
+
+    <!--Produto Item58-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">HOT DOG ESPECIAL COM BACON</p>
+            <p class="text-sm">2 salsichas, bacon, tomate, milho, batata palha, catchup, mostarda, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="HOT DOG ESPECIAL COM BACON"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item58-->
+
+    <!--Produto Item59-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">HOT DOG ESPECIAL COM FRANGO</p>
+            <p class="text-sm">2 salsichas, frango desfiado,  tomate, milho, batata palha, catchup, mostarda, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="HOT DOG ESPECIAL COM FRANGO"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item59-->
+
+    <!--Produto Item60-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">HOT DOG ESPECIAL COM FRANGO E BACON</p>
+            <p class="text-sm">2 salsichas, frango desfiado, bacon, tomate, milho, batata palha, catchup, mostarda, catupiry e maionese.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 40,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="HOT DOG ESPECIAL COM FRANGO E BACON"
+                data-price="40.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item60-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">ADICIONAIS NOS LANCHES</h2>
+</div>
+<div class="mx-auto max-w-7x1 px-4 my-2">
+    <h3 class="font-bold text-1xl text-red-500 text-center underline underline-offset-1">Obs.: Acrésimos são para cada item.</h3>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item61-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">MILHO / OVO / SALSICHA / CEBOLA / VINAGRETE / ALFACE / TOMATE </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 2,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: MILHO / OVO / SALSICHA / CEBOLA / VINAGRETE / ALFACE / TOMATE"
+                data-price="2.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item61-->
+
+    <!--Produto Item62-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">QUEIJO / PRESUNTO / BATATA PALHA </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 5,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: QUEIJO / PRESUNTO / BATATA PALHA"
+                data-price="5.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item62-->
+
+    <!--Produto Item63-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BACON / CALABRESA / LOMBO </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 10,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: BACON / CALABRESA / LOMBO"
+                data-price="10.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item63-->
+
+    <!--Produto Item64-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">CATUPIRY / BORDA DE CATUPIRY </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 10,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: CATUPIRY / BORDA DE CATUPIRY"
+                data-price="10.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item64-->
+
+    <!--Produto Item65-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">FRANGO DESFIADO / FILÉ DE FRANGO / LINGUIÇA / HAMBURGUER </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 10,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: FRANGO DESFIADO / FILÉ DE FRANGO / LINGUIÇA / HAMBURGUER"
+                data-price="10.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item65-->
+
+    <!--Produto Item66-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BIFE ANCHO / CHORIZO </p>
+            
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 17,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="ACRESIMO DE 1 ADICIONAL: FRANGO DESFIADO / FILÉ DE FRANGO / LINGUIÇA / HAMBURGUER"
+                data-price="17.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item66-->
+
+</div>
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="font-bold text-3xl">PORÇÕES QUENTES</h2>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+    <!--Produto Item67.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 23,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA MÉDIA"
+                data-price="23.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item67.1-->
+
+    <!--Produto Item67.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA GRANDE"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item67.2-->
+
+    <!--Produto Item68.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA COM QUEIJO E ORÉGANO MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 34,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA COM QUEIJO E ORÉGANO MÉDIA"
+                data-price="34.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item68.1--> 
+
+    <!--Produto Item68.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA COM QUEIJO E ORÉGANO GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 52,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA COM QUEIJO E ORÉGANO GRANDE"
+                data-price="52.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item68.2-->
+
+    <!--Produto Item69.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA COM CHEDDAR E BACON MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 44,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA COM CHEDDAR E BACON MÉDIA"
+                data-price="44.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item69.1-->
+
+    <!--Produto Item69.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA COM CHEDDAR E BACON GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 62,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA COM CHEDDAR E BACON GRANDE"
+                data-price="62.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item69.2-->
+
+    <!--Produto Item70.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA RÚSTICA TEMPERADA MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 25,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA RÚSTICA TEMPERADA MÉDIA"
+                data-price="25.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item70.1-->
+
+    <!--Produto Item70.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">BATATA FRITA RÚSTICA TEMPERADA GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 40,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="BATATA FRITA RÚSTICA TEMPERADA GRANDE"
+                data-price="40.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item70.2-->
+
+    <!--Produto Item71.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE QUIBE MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 22,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE QUIBE MÉDIA"
+                data-price="22.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item71.1-->
+
+    <!--Produto Item71.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE QUIBE GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 42,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE QUIBE GRANDE"
+                data-price="42.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item71.2-->
+
+    <!--Produto Item72.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE ANEL DE CEBOLA MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 22,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE ANEL DE CEBOLA MÉDIA"
+                data-price="22.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item72.1-->
+
+    <!--Produto Item72.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE ANEL DE CEBOLA GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 35,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE ANEL DE CEBOLA GRANDE"
+                data-price="35.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item72.2-->
+
+    <!--Produto Item73.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">STICK DE QUEIJO MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 48,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="STICK DE QUEIJO MÉDIA"
+                data-price="48.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item73.1-->
+
+    <!--Produto Item73.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">STICK DE QUEIJO GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 90,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="STICK DE QUEIJO GRANDE"
+                data-price="90.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item73.2--> 
+
+    <!--Produto Item74.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">FRANGO À PASSARINHO MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 30,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="STICK DE QUEIJO GRANDE"
+                data-price="30.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item74.1-->
+
+    <!--Produto Item74.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">FRANGO À PASSARINHO GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 50,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="FRANGO À PASSARINHO GRANDE"
+                data-price="50.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item74.2-->
+
+    <!--Produto Item75.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE PANCETA MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 40,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE PANCETA MÉDIA"
+                data-price="40.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item75.1-->
+
+    <!--Produto Item75.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE PANCETA GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 80,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE PANCETA GRANDE"
+                data-price="80.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item75.2-->
+
+    <!--Produto Item76.1-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE TILÁPIA MÉDIA</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 45,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE TILÁPIA MÉDIA"
+                data-price="45.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item76.1--> 
+
+    <!--Produto Item76.2-->
+    <div class="flex gap-3 md:pl-5 px-5">
+        <img src="images/embreve.png" 
+        alt="CHURRASCO" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+
+        <div>
+            <p class="font-bold">PORÇÃO DE TILÁPIA GRANDE</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold">R$: 90,00</p>
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="PORÇÃO DE TILÁPIA GRANDE"
+                data-price="90.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Fim Produto Item76.2-->
+
+
+</div>
+
+
+    
+
+
+
+
+<!--Inicio bebidas-->
+
+<div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">SUCOS</h2><br>
+        <h2 class="font-bold text-1x1">(100% NATURAL 500ml)</h2>
+        
+</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+        <div class="max-w-4xl mx-auto bg-white p-5 ">
+            
+            <div class="mb-4">
+                <span class="text-md sm:text-sm md:text-sm font-semibold"></span>
+                <span class="text-md sm:text-sm md:text-xl font-semibold">LARANJA / ACEROLA / MARACUJÁ / MORANGO / ABACAXI / ABACAXI COM HORTELÃ</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="table-auto w-full">
+                    <thead>
+                        <tr>
+                            <th class="px-1 py-2 border"> </th>
+                            <th class="px-1 py-2 border">COM ÁGUA</th>
+                            <th class="px-1 py-2 border">COM LEITE</th>
+                            <th class="px-1 py-2 border">COMBINADO C/ ÁGUA (2 SABORES)</th>
+                            <th class="px-1 py-2 border">COMBINADO C/ LEITE (2 SABORES)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-1 py-1 border">COPO</td>
+                            <td class="px-1 py-1 border">R$ 10,00</td>
+                            <td class="px-1 py-1 border">R$ 13,00</td>
+                            <td class="px-1 py-1 border">R$ 13,00</td>
+                            <td class="px-1 py-1 border">R$ 15,00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-1 py-1 border">JARRA</td>
+                            <td class="px-1 py-1 border">R$ 18,00</td>
+                            <td class="px-1 py-1 border">R$ 22,00</td>
+                            <td class="px-1 py-1 border">R$ 23,00</td>
+                            <td class="px-1 py-1 border">R$ 27,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center text-sm sm:text-base md:text-lg text-red-600 mt-4">
+                Embalagem para viagem acréscimo de R$ 1,50
+            </div>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                data-name="SUCOS"
+                data-price="">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">BEBIDAS</h2>
+    </div>
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item78-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/78-Agua mineral.png" 
+            alt="Água mineral" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ÁGUA MINERAL (500ml)</p>
+                <p class="text-sm">Garrafa de água mineral 500ml</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 4,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ÁGUA MINERAL (500ml)"
+                    data-price="4.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item78-->
+
+        <!--Produto Item79-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/80-AGUA_PRATA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ÁGUA MINERAL PRATA (300ml)</p>
+                <p class="text-sm">Garrafa de água mineral Prata 300ml</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 5,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ÁGUA MINERAL PRATA (300ml)"
+                    data-price="5.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item79-->
+
+        <!--Produto Item80-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/80-AGUA_PRATA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ÁGUA MINERAL PRATA (500ml)</p>
+                <p class="text-sm">Garrafa de água mineral Prata 500ml</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ÁGUA MINERAL PRATA (500ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item80-->
+
+        <!--Produto Item81-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/81-agua tonica.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ÁGUA TÔNICA (LATA 350ml)</p>
+                <p class="text-sm">Lata de água tônica 350ml</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ÁGUA TÔNICA(350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item81-->
+
+        <!--Produto Item82-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/82-Gatorade.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">GATORADE (500ml)</p>
+                <p class="text-sm">Garrafa de Gatorade 500ml</p>
+                <p class="text-sm text-red-500">Consultar sabores ao atendente.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="GATORADE (500ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item82-->
+
+        <!--Produto Item83-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/83 - H2OH.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">H2OH (500ml)</p>
+                <p class="text-sm">Garrafa de H2OH 500ml</p>
+                <p class="text-sm text-red-500">Consultar sabores ao atendente.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 8,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="H2OH (500ml)"
+                    data-price="8.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item83-->
+
+        <!--Produto Item84-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/84 - SUCO DEL VALLE.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">SUCO DEL VALLE (LATA 290ml)</p>
+                <p class="text-sm">Lata de suco Del Valle 290ml</p>
+                <p class="text-sm text-red-500">Consultar sabores ao atendente.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="SUCO DEL VALLE (LATA 290ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item84-->
+
+        <!--Produto Item85-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/85 - MONSTER.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ENERGÉTICO MONSTER (LATA 473ml)</p>
+                <p class="text-sm">Lata de energético Monster 473ml</p>
+                <p class="text-sm text-red-500">Consultar sabores ao atendente.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 15,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ENERGÉTICO MONSTER (LATA 473ml)"
+                    data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item85-->
+
+        <!--Produto Item86-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/86 - Smirnoff-ICE.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">SMIRNOFF ICE (LATA 335ml)</p>
+                <p class="text-sm">Lata de Smirnoff Ice 335ml</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 15,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="SMIRNOFF ICE (LATA 335ml)"
+                    data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item86-->    
+    </div>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">REFRIGERANTES</h2>
+    </div>
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item86.5-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/86-5-COCA2L.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">COCA-COLA (2 LITROS)</p>
+                <p class="text-sm">Garrafa de Coca-Cola 2 litros</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 19,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="COCA-COLA (2 LITROS)"
+                    data-price="19.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item86.5-->
+
+        <!--Produto Item86.6-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/86-6 RefriDiversos.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">REFRIGERANTES DIVERSOS SABORES (2 LITROS)</p>
+                <p class="text-sm">Garrafa de refrigerante 2 litros</p>
+                <p class="text-sm text-red-500">Consultar sabores ao atendente.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 15,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="REFRIGERANTES DIVERSOS SABORES (2 LITROS)"
+                    data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item86.6-->  
+
+        
+
+    
+
+        <!--Produto Item89.1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/refri-1.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">COCA-COLA (LATA 350ml)</p>
+                <p class="text-sm">Lata de Coca-Cola (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="COCA-COLA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.1-->  
+
+        <!--Produto Item89.2-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/refri-2.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">GUARANÁ ANTARCTICA (LATA 350ml)</p>
+                <p class="text-sm">Lata de Guaraná Antarctica (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="GUARANÁ ANTARCTICA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.2-->  
+
+        <!--Produto Item89.3-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/89-3-FANTA-LARANJA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">FANTA LARANJA (LATA 350ml)</p>
+                <p class="text-sm">Lata de Fanta sabor laranja (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FANTA LARANJA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.3--> 
+        
+        <!--Produto Item89.4-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/89-4-FANTA-UVA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">FANTA UVA (LATA 350ml)</p>
+                <p class="text-sm">Lata de Fanta sabor uva (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FANTA UVA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.4-->  
+
+    
+
+        <!--Produto Item89.6-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/89-6-Schweppes.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">SCHWEPPES CITRUS (LATA 350ml)</p>
+                <p class="text-sm">Lata de Schweppes sabor citrus (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="SCHWEPPES CITRUS (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.6-->
+
+        <!--Produto Item89.7-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/89-7-SODALIMON.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">SODA LIMONADA (LATA 350ml)</p>
+                <p class="text-sm">Lata de Soda Limonada (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="SODA LIMONADA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item89.7-->
+
+        
+
+        <!--Produto Item91.1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/91.1-coca600.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">COCA-COLA (GARRAFA 600ml)</p>
+                <p class="text-sm">Garrafa de Coca-Cola (600ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="COCA-COLA (GARRAFA 600ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item91.1-->  
+
+        <!--Produto Item91.2-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/91-2-Guarana600.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">GUARANÁ ANTARCTICA (GARRAFA 600ml)</p>
+                <p class="text-sm">Garrafa de Guaraná Antarctica (600ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="GUARANÁ ANTARCTICA (GARRAFA 600ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item91.2-->  
+
+        <!--Produto Item91.3-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/91-3-FANTALARANJA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">FANTA LARANJA (GARRAFA 600ml)</p>
+                <p class="text-sm">Garrafa de Fanta sabor laranja (600ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FANTA LARANJA (GARRAFA 600ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item91.3--> 
+        
+        <!--Produto Item91.4-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/91-4-FANTAUVA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">FANTA UVA (GARRAFA 600ml)</p>
+                <p class="text-sm">Garrafa de Fanta sabor uva (600ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="FANTA UVA (GARRAFA 600ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item91.4-->  
+
+              
+
+        <!--Produto Item93-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/93-LIMAOeGELO.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">LIMÃO E GELO</p>
+                <p class="text-sm">Adicionar Limão e gelo a bebidas</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 2,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="LIMÃO E GELO"
+                    data-price="2.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item93--> 
+    </div>
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">CERVEJAS</h2>
+    </div>
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+        <!--Produto Item94.1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/94-ANTARCTICA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">ANTÁRCTICA (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Antárctica (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="ANTÁRCTICA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item94.1-->
+
+        <!--Produto Item94.2-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/94-2-BRAHMA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">BRAHMA (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Brahma (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="BRAHMA (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item94.2-->
+
+        <!--Produto Item94.3-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/94-3-skol.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">SKOL (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Skoll (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 6,50</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="SKOL (LATA 350ml)"
+                    data-price="6.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item94.3-->
+
+        <!--Produto Item95.1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/95-1-HEINEKENLONG.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">HEINEKEN (LONG NECK 330ml)</p>
+                <p class="text-sm">Long neck de cerveja Heineken (330ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 12,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="HEINEKEN (LONG NECK 350ml)"
+                    data-price="12.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item95.1-->
+
+        <!--Produto Item95.2-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/95-2-STELLALONG.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">STELLA ARTOIS (LONG NECK 330ml)</p>
+                <p class="text-sm">Long neck de cerveja Stella Artois (330ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 12,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="STELLA ARTOIS (LONG NECK 350ml)"
+                    data-price="12.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item95.2-->
+
+        <!--Produto Item96.1-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/96-1-HEINEKENLATA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">HEINEKEN (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Heineken (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="HEINEKEN (LATA 350ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item96.1-->
+
+        <!--Produto Item96.2-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/96-2-BudiLATA.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">BUDWEISER (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Budweiser (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="BUDWEISER (LATA 350ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item96.2-->
+
+        <!--Produto Item97-->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/97-Malzbier.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+    
+            <div>
+                <p class="font-bold">MALZBIER (LATA 350ml)</p>
+                <p class="text-sm">Lata de cerveja Malzbier (350ml)</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="MALZBIER (LATA 350ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Fim Produto Item97-->
+
+        <!-- Produto Item101 -->
+        <div class="flex gap-3 md:pl-5 px-5">
+            <img src="images/101-HEINEKEN00.png" 
+            alt="CHURRASCO" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300 justify-between" >
+        
+            <div>
+                <p class="font-bold">CERVEJA SEM ÁLCOOL (LONG NECK 350ml)</p>
+                <p class="text-sm">Long neck de cerveja sem álcool (350ml)</p>
+            
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold">R$: 10,00</p>
+                    <button class="bg-gray-900 px-5 rounded add-tocart-btn" 
+                    data-name="CERVEJA SEM ÁLCOOL (LONG NECK 350ml)"
+                    data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+<!-- Fim Produto Item101 -->
+
+    </div>
+    
+</div>
+<!--Fim Menu-->
+
+
+
+<!-- Modal cart -->
+<div class="bg-black/65 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-[99] flex items-center justify-center hidden" id="cart-modal">
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] max-h-[80%] overflow-y-auto">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col">
+            <!-- Contêiner para os itens do carrinho -->
+            <div id="cart-items-content" class="max-h-[40vh] overflow-y-auto mb-4">
+                <!-- Adicione seus itens do carrinho aqui -->
+            </div>
+            <p class="font-bold" hidden>Total: <span id="cart-total">0.0</span></p>
+            <!-- Endereço de entrega e botão Finalizar Pedido -->
+            <div class="flex flex-col">
+                <p class="font-bold mt-4">Endereço de entrega</p>
+                <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1">
+                <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+                
+                <!-- Campo para observações -->
+                <p class="font-bold mt-4">Observações</p>
+                <textarea placeholder="Digite suas observações..." id="observations" class="w-full border-2 p-1 rounded my-1"></textarea>
+                
+                <!-- Opção de pagamento -->
+                <p class="font-bold mt-4">Opção de pagamento</p>
+                <div class="flex flex-col space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="payment" value="pix" class="mr-2"> Pix
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="payment" value="credito" class="mr-2"> Cartão de crédito
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="payment" value="debito" class="mr-2"> Cartão de débito
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="payment" value="dinheiro" class="mr-2"> Dinheiro
+                    </label>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-5 w-full">
+                    <button id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--Carrinho de compras-->
+<footer class="w-full  py-3 fixed bottom-0 z-40 flex items-center justify-center shadow-lg">
+    <button class="flex items-center gap-3 text-white font-bold px-4 py-2 bg-red-600 rounded-full hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105" id="cart-btn">
+        <span class="flex items-center justify-center bg-white text-red-600 rounded-full w-6 h-6 font-bold p-3" id="cart-count">0</span>
+        Veja meu carrinho
+        <i class="fa fa-cart-plus text-xl text-white"></i>
+    </button> 
+</footer>
+<!--Fim carrinho de compras-->
+
+
+<script src="script.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
